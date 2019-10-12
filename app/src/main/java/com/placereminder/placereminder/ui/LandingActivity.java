@@ -16,6 +16,7 @@ import com.placereminder.placereminder.db.AppDatabase;
 import com.placereminder.placereminder.db.PrefKey;
 import com.placereminder.placereminder.db.PrefManager;
 import com.placereminder.placereminder.model.Reminderdb;
+import com.placereminder.placereminder.presenter.ILandingPresenter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,13 +33,14 @@ public class LandingActivity extends AppCompatActivity{
     private ReminderAdapter adapter;
     LinearLayoutManager layoutManager;
     private Reminderdb reminder;
-
+    ILandingPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
        // ButterKnife.bind(this);
+       // presenter.setView(this,appDatabase);
         initView();
 
 
@@ -52,22 +54,37 @@ public class LandingActivity extends AppCompatActivity{
         retrieveReminderDataSet();
     }
 
-    private void retrieveReminderDataSet(){
+//    @Override
+//    public void retrieveReminderDataSet(List<Reminderdb> reminderdbArrayList){
+//
+//            reminderdbArrayList = appDatabase.reminderDao().getAll();
+//            Collections.reverse(reminderdbArrayList);
+//            adapter = new ReminderAdapter(this, reminderdbArrayList);
+//            layoutManager = new LinearLayoutManager(this);
+//            reminderList.setLayoutManager(layoutManager);
+//            reminderList.setAdapter(adapter);
+//
+//    }
 
+    public void retrieveReminderDataSet(){
+
+        try {
             reminderdbArrayList = appDatabase.reminderDao().getAll();
             Collections.reverse(reminderdbArrayList);
             adapter = new ReminderAdapter(this, reminderdbArrayList);
             layoutManager = new LinearLayoutManager(this);
             reminderList.setLayoutManager(layoutManager);
             reminderList.setAdapter(adapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
-
     private void initView() {
         appDatabase = AppDatabase.getAppDatabase(this);
         reminderList = findViewById(R.id.rv_reminder_list);
         addReminder = findViewById(R.id.fab_add_reminder);
-        reminder = new Reminderdb();
+        reminder = new Reminderdb(); // this is for null pointer exception problem
         reminder.setPlaceName("Sample Data");
         reminder.setPlaceLocation("Sample Data");
         reminder.setDate("12/12/20");

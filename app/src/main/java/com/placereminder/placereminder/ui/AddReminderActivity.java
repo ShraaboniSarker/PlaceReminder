@@ -166,7 +166,9 @@ public class AddReminderActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btn_pick_location_from_map:
                // startActivity(new Intent(AddReminderActivity.this,PickPlaceActivity.class));
-                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();  // for some unknown reason google map
+                // is loading but got close with in 2 sec. worked a lot on that issue. myb due to google
+                // api duplicate issue reason.
                 Intent place_intent;
                 try {
                     place_intent = builder.build(AddReminderActivity.this);
