@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.AddReminderFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/colorPrimary">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Reminder"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:textSize="@dimen/sp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/login_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp20">
+
+            <EditText
+                android:id="@+id/et_place_name"
+                android:layout_width="@dimen/dp311"
+                android:layout_height="@dimen/dp52"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp7"
+                android:background="@drawable/shape_edt_txt"
+                android:hint="Place Name"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp20"
+                android:paddingTop="@dimen/field_padding"
+                android:paddingEnd="@dimen/dp20"
+                android:paddingBottom="@dimen/field_padding"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/et_place_location"
+                android:layout_width="@dimen/dp311"
+                android:layout_height="@dimen/dp52"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp7"
+                android:background="@drawable/shape_edt_txt"
+                android:hint="Place Location"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp20"
+                android:paddingTop="@dimen/field_padding"
+                android:paddingEnd="@dimen/dp20"
+                android:paddingBottom="@dimen/field_padding"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_pick_location_from_map"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/dp311"
+                android:layout_height="@dimen/dp42"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/new_secondary_function_btn_design"
+                android:text="pick location from map"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+            <EditText
+                android:id="@+id/et_date_picker"
+                android:layout_width="@dimen/dp311"
+                android:layout_height="@dimen/dp52"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp7"
+                android:background="@drawable/shape_edt_txt"
+                android:hint="Pick a date"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp20"
+                android:paddingTop="@dimen/field_padding"
+                android:paddingEnd="@dimen/dp20"
+                android:paddingBottom="@dimen/field_padding"
+                android:focusable="false"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_time_picker"
+                android:layout_width="@dimen/dp311"
+                android:layout_height="@dimen/dp52"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp7"
+                android:background="@drawable/shape_edt_txt"
+                android:hint="Pick a time"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:focusable="false"
+                android:paddingStart="@dimen/dp20"
+                android:paddingTop="@dimen/field_padding"
+                android:paddingEnd="@dimen/dp20"
+                android:paddingBottom="@dimen/field_padding"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+
+
+<!--            <TimePicker-->
+<!--                android:id="@+id/tp_alarm_time"-->
+<!--                android:layout_width="@dimen/dp311"-->
+<!--                android:layout_height="wrap_content" />-->
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="@dimen/dp311"
+                android:layout_height="@dimen/dp52"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp7"
+                android:background="@drawable/shape_edt_txt"
+                android:hint="Description (optional)"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp20"
+                android:paddingTop="@dimen/field_padding"
+                android:paddingEnd="@dimen/dp20"
+                android:paddingBottom="@dimen/field_padding"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_save"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="143dp"
+                android:layout_height="@dimen/dp42"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/new_secondary_function_btn_design"
+                android:text="save"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

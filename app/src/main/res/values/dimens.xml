@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sp17">17sp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="dp311">311dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp7">7dp</dimen>
+    <dimen name="field_padding">10dp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="dp52">52dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp42">42dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp9">9dp</dimen>
+    <dimen name="sp14">14sp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+</resources>
